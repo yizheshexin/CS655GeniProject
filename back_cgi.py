@@ -37,8 +37,12 @@ if fileitem.filename:
     s.settimeout(3)
     messsage= reshaped
     data_string = pickle.dumps(messsage)
+<<<<<<< HEAD
     temp = 0
     while(temp<5):
+=======
+    while(True):
+>>>>>>> cfefb8f6a339bc1adbad3508ec3d1e0766cbd64b
         try:
             s.send(data_string) # send the image all
             data = s.recv(1024)
@@ -47,8 +51,12 @@ if fileitem.filename:
             s.close()
             break
         except :
+<<<<<<< HEAD
             temp += 1
             print ('Retrying after TimeoutError, temp'+temp)
+=======
+            print ('Retrying after TimeoutError')
+>>>>>>> cfefb8f6a339bc1adbad3508ec3d1e0766cbd64b
             continue
 
 ############## connnection part ends
